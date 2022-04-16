@@ -4,6 +4,9 @@
 # mortality
 
 <!-- badges: start -->
+
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
 This R-package fetches and organises the human mortality data from the
@@ -21,8 +24,8 @@ Specifically:
     (think human life is short so stay humble – okay, I’ll see my way
     out 😅), instead of a list of class `demogdata`,
 -   it grabs data that are more than just period 1x1, and
--   it provides a helper function to convert `demogdata` to a `humble`
-    table.
+-   <strike>it provides a helper function to convert `demogdata` to a
+    `humble` table. </strike> (not implemented yet)
 
 ## Installation
 
