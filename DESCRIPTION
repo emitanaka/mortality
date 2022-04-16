@@ -17,3 +17,5 @@ Imports:
     rlang,
     tibble,
     utils
+URL: https://github.com/emitanaka/mortality
+BugReports: https://github.com/emitanaka/mortality/issues
