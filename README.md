@@ -179,3 +179,9 @@ hmd_data(c("Australia" = "AUS", "Japan" = "JPN"),
 #> 10 1921-1924    40-44              681851.      719764.      1401615. Australia
 #> # … with 830 more rows
 ```
+
+# Related packages
+
+-   `demography`
+-   `HMDHFDplus`
+-   `MortalityLaws`

@@ -96,3 +96,9 @@ You can also get a different age or year range:
 hmd_data(c("Australia" = "AUS", "Japan" = "JPN"), 
          stats = "exposure_to_risk", year_range = 5, age_range = 5)
 ```
+
+# Related packages
+
+* `demography`
+* `HMDHFDplus`
+* `MortalityLaws`
