@@ -1,0 +1,97 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# mortality
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+This R-package fetches and organises the human mortality data from the [Human Mortality Database](mortality.org) in a tidy fashion. For a more richer and complete package, you should have a look at the `demography` package. 
+
+The `mortality` package is a modern re-imagination and extension of the functions `hmd.mx`, `hmd.e0`, and `hmd.pop` in the `demography` package. Specifically:
+
+* import of `RCurl` is replaced by `curl` where the latter is a modern version of the former with zero import,
+* the fetched data is a special type of `tibble`, called `humble` (think human life is short so stay humble -- okay, I'll see my way out 😅), instead of a list of class `demogdata`, 
+* it grabs data that are more than just period 1x1, and 
+* it provides a helper function to convert `demogdata` to a `humble` table. 
+
+## Installation
+
+You can install the development version of mortality as below:
+
+``` r
+install.packages("remotes")
+remotes::install_github("emitanaka/mortality")
+```
+
+## Usage
+
+```{r}
+library(mortality)
+```
+
+
+You first need to [register as a user](https://www.mortality.org/mp/auth.pl) (if you haven't already) at the Human Mortality Database. To now set a session with 
+your username and password, fill in your details below and run the code. 
+
+```r
+hmd_session(username = <YOUR USERNAME>,
+            password = <YOUR PASSWORD>)
+```
+
+Alternatively, you can store your username and password in the `.Renviron` file
+containing below:
+
+```
+HMD_USERNAME=<YOUR USERNAME>
+HMD_PASSWORD=<YOUR PASSWORD>
+```
+
+then simply just run the command before just once before getting the data:
+
+```{r}
+hmd_session()
+```
+
+All data are obtained via `hmd_data()`. 
+
+```{r}
+hmd_data("AUS", stats = "death")
+```
+
+The function offers support for multiple countries:
+
+```{r}
+hmd_data(c("AUS", "JPN"), stats = "death")
+```
+
+or multiple statistics:
+
+```{r}
+hmd_data(c("AUS", "JPN"), stats = c("death", "death_rate"))
+```
+
+or relabeling of the countries like below:
+
+```{r}
+hmd_data(c("Australia" = "AUS", "Japan" = "JPN"), stats = "population")
+```
+
+You can also get a different age or year range:
+
+```{r}
+hmd_data(c("Australia" = "AUS", "Japan" = "JPN"), 
+         stats = "exposure_to_risk", year_range = 5, age_range = 5)
+```
