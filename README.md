@@ -185,3 +185,4 @@ hmd_data(c("Australia" = "AUS", "Japan" = "JPN"),
 -   `demography`
 -   `HMDHFDplus`
 -   `MortalityLaws`
+-   (developmental) `tidylife`
