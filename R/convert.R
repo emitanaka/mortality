@@ -19,7 +19,7 @@ as_demogdata <- function(data, country = NULL) {
     dat <- data[data$country==country, ]
   }
   # is the data wide form?
-  if(any(grepl("female", colnames(dat)))) {
+  if(any(grepl("female", colnames(data)))) {
     dat <- dat[order(dat$year, dat$age),]
     year <- unique(dat$year)
     age <- unique(dat$age)
