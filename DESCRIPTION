@@ -16,6 +16,10 @@ Imports:
     curl,
     rlang,
     tibble,
-    utils
+    utils,
+    vctrs
+Suggests: 
+    ggplot2 (>= 3.3.0),
+    scales
 URL: https://github.com/emitanaka/mortality
 BugReports: https://github.com/emitanaka/mortality/issues

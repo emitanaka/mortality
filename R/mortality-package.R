@@ -1,5 +1,5 @@
 #' @keywords internal
-#' @import rlang
+#' @import rlang vctrs
 "_PACKAGE"
 
 ## usethis namespace: start

@@ -2,14 +2,55 @@
 % Please edit documentation in R/hmd.R
 \name{hmd_data}
 \alias{hmd_data}
+\alias{hmd_life_expectancy}
+\alias{hmd_birth}
+\alias{hmd_life_table}
+\alias{hmd_population}
+\alias{hmd_death}
+\alias{hmd_exposure_to_risk}
+\alias{hmd_death_rate}
 \title{Fetch the data from the Human Mortality Database}
 \usage{
 hmd_data(
   country,
   stats = "death_rate",
+  sex_format = c("wide", "long"),
   year_range = 1,
+  age_range = 1
+)
+
+hmd_life_expectancy(country, sex_format = c("wide", "long"), year_range = 1)
+
+hmd_birth(country, sex_format = c("wide", "long"))
+
+hmd_life_table(
+  country,
+  sex_format = c("wide", "long"),
   age_range = 1,
-  user = NULL
+  year_range = 1
+)
+
+hmd_population(country, sex_format = c("wide", "long"), age_range = 1)
+
+hmd_death(
+  country,
+  sex_format = c("wide", "long"),
+  age_range = 1,
+  year_range = 1
+)
+
+hmd_exposure_to_risk(
+  country,
+  sex_format = c("wide", "long"),
+  age_range = 1,
+  year_range = 1
+)
+
+hmd_death_rate(
+  country,
+  sex_format = c("wide", "long"),
+  age_range = 1,
+  year_range = 1
 )
 }
 \arguments{
@@ -21,13 +62,11 @@ name is used as the label.}
 "birth", "death", "life_expectancy", "exposure_to_risk", "population",
 and "life_tables".}
 
-\item{user}{Either a named list of \code{username} and \code{password} to access the
-HMD or if \code{NULL} then the username and password set by \code{hmd_user} is
-used instead. The recommended approach is just to set the user session
-with \code{hmd_user()}.}
+\item{sex_format}{A logical value to indicate whether the sex should be
+returned as "long" or "wide" format. The default is "wide".}
 
 \item{range_year, range_age}{A single integer indicating the period or
-cohort year/age range.}
+cohort year/age range. Generally, only 1, 5 or 10 are available.}
 }
 \value{
 A humble object.
@@ -36,5 +75,5 @@ A humble object.
 Fetch the data from the Human Mortality Database
 }
 \seealso{
-hmd_birth
+hmd_session
 }

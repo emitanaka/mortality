@@ -8,6 +8,14 @@
 \description{
 This package is a proof of concept for a tidy way to fetch and organise the human mortality data from mortality.org. For a more richer and complete package, you should have a look at the demography package.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/emitanaka/mortality}
+  \item Report bugs at \url{https://github.com/emitanaka/mortality/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Emi Tanaka \email{dr.emi.tanaka@gmail.com} (\href{https://orcid.org/0000-0002-1455-259X}{ORCID})
 

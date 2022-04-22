@@ -166,18 +166,42 @@ hmd_data(c("Australia" = "AUS", "Japan" = "JPN"),
 #> # A humble:  840 x 6
 #> # Countries: Australia, Japan
 #>    year_range_5 age_range_5 exprisk_female exprisk_male exprisk_total country  
-#>    <chr>        <chr>                <dbl>        <dbl>         <dbl> <chr>    
-#>  1 1921-1924    0                  256600.      267063.       523663. Australia
-#>  2 1921-1924    1-4                957177.      994721.      1951898. Australia
-#>  3 1921-1924    5-9               1180057.     1213273.      2393330. Australia
-#>  4 1921-1924    10-14             1096076.     1123037.      2219113. Australia
-#>  5 1921-1924    15-19              968522.      997946.      1966469. Australia
-#>  6 1921-1924    20-24              925053.      914989.      1840042. Australia
-#>  7 1921-1924    25-29              941637.      894549.      1836186. Australia
-#>  8 1921-1924    30-34              915723.      926174.      1841897. Australia
-#>  9 1921-1924    35-39              806054.      842748.      1648803. Australia
-#> 10 1921-1924    40-44              681851.      719764.      1401615. Australia
+#>          <itvl>      <itvl>          <dbl>        <dbl>         <dbl> <chr>    
+#>  1    1921-1924           0        256600.      267063.       523663. Australia
+#>  2    1921-1924         1-4        957177.      994721.      1951898. Australia
+#>  3    1921-1924         5-9       1180057.     1213273.      2393330. Australia
+#>  4    1921-1924       10-14       1096076.     1123037.      2219113. Australia
+#>  5    1921-1924       15-19        968522.      997946.      1966469. Australia
+#>  6    1921-1924       20-24        925053.      914989.      1840042. Australia
+#>  7    1921-1924       25-29        941637.      894549.      1836186. Australia
+#>  8    1921-1924       30-34        915723.      926174.      1841897. Australia
+#>  9    1921-1924       35-39        806054.      842748.      1648803. Australia
+#> 10    1921-1924       40-44        681851.      719764.      1401615. Australia
 #> # … with 830 more rows
+```
+
+Now also supports getting the data with a long format with sex as a
+variable:
+
+``` r
+hmd_data(c("AUS", "JPN"), sex_format = "long")
+#> # A humble:  57,609 x 5
+#> # Countries: AUS, JPN
+#> # Year:      1921-2020
+#> # Age:       0-110
+#>     year   age country deathrate sex   
+#>    <int> <int> <chr>       <dbl> <chr> 
+#>  1  1921     0 AUS       0.0600  female
+#>  2  1921     1 AUS       0.0121  female
+#>  3  1921     2 AUS       0.00578 female
+#>  4  1921     3 AUS       0.00289 female
+#>  5  1921     4 AUS       0.00325 female
+#>  6  1921     5 AUS       0.00252 female
+#>  7  1921     6 AUS       0.00248 female
+#>  8  1921     7 AUS       0.00181 female
+#>  9  1921     8 AUS       0.00138 female
+#> 10  1921     9 AUS       0.00137 female
+#> # … with 57,599 more rows
 ```
 
 # Related packages

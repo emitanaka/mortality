@@ -97,6 +97,13 @@ hmd_data(c("Australia" = "AUS", "Japan" = "JPN"),
          stats = "exposure_to_risk", year_range = 5, age_range = 5)
 ```
 
+Now also supports getting the data with a long format with sex as a variable:
+
+```{r}
+hmd_data(c("AUS", "JPN"), sex_format = "long")
+```
+
+
 # Related packages
 
 * `demography`
