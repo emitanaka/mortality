@@ -15,5 +15,13 @@ hmd_session(
 \item{password}{The password used to access HMD.}
 }
 \description{
-Set the username and password to access the Human Mortality Database
+You first need to register as a user
+(if you haven't already) at the Human Mortality Database.
+To now set a session pass in your username and password from your account or
+alternatively, you can store your username and password in the .Renviron file
+containing
+
+HMD_USERNAME=<YOUR USERNAME>
+
+HMD_PASSWORD=<YOUR PASSWORD>
 }

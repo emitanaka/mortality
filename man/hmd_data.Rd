@@ -60,7 +60,7 @@ name is used as the label.}
 
 \item{stats}{The statistics to extract. The available statistics are:
 "birth", "death", "life_expectancy", "exposure_to_risk", "population",
-and "life_tables".}
+"life_tables", and "death_rate".}
 
 \item{sex_format}{A logical value to indicate whether the sex should be
 returned as "long" or "wide" format. The default is "wide".}
@@ -72,7 +72,11 @@ cohort year/age range. Generally, only 1, 5 or 10 are available.}
 A humble object.
 }
 \description{
-Fetch the data from the Human Mortality Database
+The \code{hmd_data()} fetches data from multiple statistics and merge them together
+in the output. All other functions grab a particular (set of) statistics from
+the Human Mortality Database (mortality.org). You need to register an account at
+mortality.org to get the data and call the \code{hmd_session()} first before
+using these functions.
 }
 \seealso{
 hmd_session

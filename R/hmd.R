@@ -1,6 +1,17 @@
 
 #' Set the username and password to access the Human Mortality Database
 #'
+#' @description
+#' You first need to register as a user
+#' (if you haven't already) at the Human Mortality Database.
+#' To now set a session pass in your username and password from your account or
+#' alternatively, you can store your username and password in the .Renviron file
+#' containing
+#'
+#' HMD_USERNAME=<YOUR USERNAME>
+#'
+#' HMD_PASSWORD=<YOUR PASSWORD>
+#'
 #' @param username The username (typically your email) that you signed up for HMD.
 #' @param password The password used to access HMD.
 #'
@@ -23,12 +34,18 @@ hmd_handle <- function(username, password) {
 
 #' Fetch the data from the Human Mortality Database
 #'
+#' The `hmd_data()` fetches data from multiple statistics and merge them together
+#' in the output. All other functions grab a particular (set of) statistics from
+#' the Human Mortality Database (mortality.org). You need to register an account at
+#' mortality.org to get the data and call the `hmd_session()` first before
+#' using these functions.
+#'
 #' @param country The country code to fetch the data for. The input may be
 #'   a named or unnamed character vector. If the vector is named, then the
 #'   name is used as the label.
 #' @param stats The statistics to extract. The available statistics are:
 #'   "birth", "death", "life_expectancy", "exposure_to_risk", "population",
-#'   and "life_tables".
+#'   "life_tables", and "death_rate".
 #' @param sex_format A logical value to indicate whether the sex should be
 #'   returned as "long" or "wide" format. The default is "wide".
 #' @param range_year,range_age A single integer indicating the period or
