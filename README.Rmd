@@ -25,8 +25,10 @@ The `mortality` package is a modern re-imagination and extension of the function
 
 * import of `RCurl` is replaced by `curl` where the latter is a modern version of the former with zero import,
 * the fetched data is a special type of `tibble`, called `humble` (think human life is short so stay humble -- okay, I'll see my way out 😅), instead of a list of class `demogdata`, 
-* it grabs data that are more than just period 1x1, and 
-* <strike>it provides a helper function to convert `demogdata` to a `humble` table. </strike> (not implemented yet)
+* it grabs data that are more than just period 1x1, 
+* it provides the data in the long or wide format for sex, 
+* it provides a helper function, `as_demogdata`, to convert the Mx and exposure table to `hmd.mx` output (i.e. `demogdata`), and
+* <strike>it provides a helper function to convert `demogdata` to a `humble` table</strike> (not implemented yet).
 
 ## Installation
 

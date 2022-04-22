@@ -23,9 +23,12 @@ Specifically:
 -   the fetched data is a special type of `tibble`, called `humble`
     (think human life is short so stay humble – okay, I’ll see my way
     out 😅), instead of a list of class `demogdata`,
--   it grabs data that are more than just period 1x1, and
+-   it grabs data that are more than just period 1x1,
+-   it provides the data in the long or wide format for sex,
+-   it provides a helper function, `as_demogdata`, to convert the Mx and
+    exposure table to `hmd.mx` output (i.e. `demogdata`), and
 -   <strike>it provides a helper function to convert `demogdata` to a
-    `humble` table. </strike> (not implemented yet)
+    `humble` table</strike> (not implemented yet).
 
 ## Installation
 
