@@ -13,7 +13,7 @@
 as_demogdata <- function(data, country = NULL) {
   if(is.null(country)) {
     if(length(unique(data$country)) > 1) abort("There is more than 1 country. Please select a country using the `country` argument.")
-    data <- dat
+    dat <- data
   } else {
     if(length(country)!=1) abort("You can only supply one country!")
     if(!country %in% data$country) abort("The country you supplied is not in the data.")
