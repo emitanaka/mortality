@@ -13,13 +13,14 @@
 as_demogdata <- function(data, country = NULL) {
   if(is.null(country)) {
     if(length(unique(data$country)) > 1) abort("There is more than 1 country. Please select a country using the `country` argument.")
+    data <- dat
   } else {
     if(length(country)!=1) abort("You can only supply one country!")
     if(!country %in% data$country) abort("The country you supplied is not in the data.")
     dat <- data[data$country==country, ]
   }
   # is the data wide form?
-  if(any(grepl("female", colnames(data)))) {
+  if(any(grepl("female", colnames(dat)))) {
     dat <- dat[order(dat$year, dat$age),]
     year <- unique(dat$year)
     age <- unique(dat$age)

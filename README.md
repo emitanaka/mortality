@@ -209,7 +209,23 @@ hmd_data(c("AUS", "JPN"), sex_format = "long")
 
 # Related packages
 
--   `demography`
--   `HMDHFDplus`
--   `MortalityLaws`
--   (developmental) `tidylife`
+-   [`demography`](https://github.com/robjhyndman/demography)
+-   [`HMDHFDplus`](https://github.com/timriffe/TR1)
+-   [`MortalityLaws`](https://github.com/mpascariu/MortalityLaws)
+-   [`tidylife`](https://github.com/robjhyndman/tidylife) (note:
+    developmental)
+-   [`raw`](https://github.com/casact/raw_package)
+-   [List of R packages for Acturial
+    Science](https://l-lists.com/en/lists/8ubu77.html):
+    -   [`actuar`](https://gitlab.com/vigou3/actuar)
+    -   [`ActuDistns`](https://github.com/cran/ActuDistns) (note:
+        archived on CRAN)
+    -   [`CompLognormal`](https://cran.r-project.org/web/packages/CompLognormal/index.html)
+    -   [`lifecontingencies`](https://github.com/spedygiorgio/lifecontingencies)
+    -   [`ChainLadder`](https://github.com/mages/ChainLadder)
+    -   [`ELT`](https://cran.r-project.org/web/packages/ELT/index.html)
+    -   [`DCL`](https://cran.r-project.org/web/packages/DCL/index.html)
+    -   [`MRMR`](https://cran.r-project.org/web/packages/MRMR/index.html)
+        (note: archived on CRAN)
+    -   [`lossDev`](https://cran.r-project.org/web/packages/lossDev/index.html)
+        (note: archived on CRAN)
