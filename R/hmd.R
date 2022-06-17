@@ -276,7 +276,7 @@ read_hmd_file <- function(country, filename, label = country) {
 }
 
 url_mortality <- function(country, filename) {
-  paste0("https://mortality.org/hmd/", country, "/STATS/", filename)
+  paste0("https://former.mortality.org/hmd/", country, "/STATS/", filename)
 }
 
 check_hmd_session <- function() {
