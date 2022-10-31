@@ -20,6 +20,8 @@ hmd_session <- function(username = Sys.getenv("HMD_USERNAME"),
                         password = Sys.getenv("HMD_PASSWORD")) {
   .hmd$username <- username
   .hmd$password <- password
+  cli::cli_inform(c("i" = "When presenting and publishing the original HMD estimates of exposure-to-risk, death rates, or life tables, please use the following citation:",
+                    " " = "HMD. Human Mortality Database. Max Planck Institute for Demographic Research (Germany), University of California, Berkeley (USA), and French Institute for Demographic Studies (France). Available at www.mortality.org."))
   invisible(list(username = username, password = password))
 }
 
